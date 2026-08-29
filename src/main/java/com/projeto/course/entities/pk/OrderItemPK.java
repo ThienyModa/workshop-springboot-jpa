@@ -3,6 +3,7 @@ package com.projeto.course.entities.pk;
 import java.io.Serializable;
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.projeto.course.entities.Order;
 import com.projeto.course.entities.Product;
 
@@ -31,6 +32,7 @@ public class OrderItemPK implements Serializable {
 	public void setOrder(Order order) {
 		this.order = order;
 	}
+	@JsonIgnore
 	public Product getProduct() {
 		return product;
 	}
